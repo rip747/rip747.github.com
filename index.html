@@ -8,11 +8,25 @@
 body {padding:15% 0;font:100% "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Arial,Verdana,sans-serif;background-color:#000;color:#9999CC;}
 #container {width:750px;text-align:center;background-color:#fff;padding:10px 0;margin: 0 auto;border: 5px solid #900; overflow: hidden;}
 h1 {color:#000;}
-h1 span {color:#900;}
+.years {color:#900;font-size:200%;}
 a {color:#000;text-decoration:none;}
 h1 a {border-bottom:1px dashed #900;}
 .gravatar {float:left; padding: 10px;}
 </style>
+</head>
+<body>
+<div id="container">
+	<div class="gravatar">
+		<img src="https://avatars2.githubusercontent.com/u/23683?v=3&s=300"/>
+	</div>
+	<h1>Anthony Petruzzi</h1>
+	<p class="years">1975 - <span>????</span></p>
+	<p>
+		<a href="mailto:tpetruzzi@gmail.com" title="Contact Me">Contact</a> - 
+		<a href="http://rip747.wordpress.com" title="my blog">Blog</a> - 
+		<a href="http://github.com/rip747" title="where all my opensource projects are">Github</a>
+	</p>
+</div>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -26,18 +40,12 @@ h1 a {border-bottom:1px dashed #900;}
   })();
 
 </script>
-</head>
-<body>
-<div id="container">
-	<div class="gravatar">
-		<img src="https://avatars2.githubusercontent.com/u/23683?v=3&s=300"/>
-	</div>
-	<h1>Anthony Petruzzi<br/><span>1975 - ????</span></h1>
-	<p>
-		<a href="mailto:tpetruzzi@gmail.com" title="Contact Me">Contact</a> - 
-		<a href="http://rip747.wordpress.com" title="my blog">Blog</a> - 
-		<a href="http://github.com/rip747" title="where all my opensource projects are">Github</a>
-	</p>
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(function(){
+	var yr = new Date().getFullYear();
+	$(".years span").html(yr);
+});
+</script>
 </body>
 </html>
